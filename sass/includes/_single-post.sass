@@ -1,0 +1,143 @@
+.single-post
+	width: 100%
+	margin: 0px auto 
+	background-color: white
+.single-post-thumbnail
+	position: relative
+	width: 100%
+	height: 400px
+	overflow: hidden
+	.single-post-title
+		width: 100%
+		position: absolute
+		bottom: 0
+		background-color: rgba(0, 0, 0,0.7)
+		min-height: 100px
+		h1
+			margin: 10px
+			color: white
+	img
+		position: absolute
+		min-height: 100%
+		min-width: 100% 
+		top: -9999px
+		bottom: -9999px
+		left: -9999px
+		right: -9999px
+		margin: auto
+.single-post-content
+	width: 90%
+	margin: 50px auto
+	p 
+		margin-top: 25px
+		font-size: 14pt
+		line-height: 1.4
+		color: #333
+		font-weight: 400
+		iframe
+			max-width: 100%
+			margin-left: 0px
+			margin-right: 0px 
+	img
+		width: 80%
+		height: auto
+		margin: auto 10%
+.single-post-comments
+	border-top: 2px solid #f1f1f1
+.comment-title
+	color: #777
+	font-size: 18px
+.comments-area
+	width: 90%
+	margin: auto
+.submit-button
+	margin: 20px auto
+	background-color: $d-green
+	outline: none
+	border: none
+	height: 40px
+	width: 100%
+	border-radius: 4px
+	transition: 0.3s
+	cursor: pointer
+	@media(max-width: 900px)
+		cursor: auto
+.comment-form-comment
+	margin-top: 10px
+	label
+		color: #777
+	textarea
+		display: block
+		color: black
+		background-color: transparent
+		border: none
+		max-width: calc(100% - 14px)
+		min-width: calc(100% - 14px)
+		border: 2px solid #E6E6E6
+		min-height: 30px
+		padding: 5px
+		&:focus
+			outline: none
+			//color: black
+.form-group
+	margin-top: 30px
+	label
+		color: #777
+	input
+		padding: 2px 5px
+		background-color: transparent
+		display: block
+		width: calc(100% - 14px)
+		height: 30px
+		color: black
+		border: none
+		border: 2px solid #E6E6E6
+		&:focus
+			outline: none
+.comment-notes, .comment-reply-title
+	color: #777
+.comment-reply-title	
+	margin-top: 10px
+
+
+.comment-list
+	//background-color: $clouds
+	a
+		color: #555
+.comment-body
+	border-bottom: 1px solid #E6E6E6
+	footer
+		padding-top: 2px
+		padding-left: 2px
+.reply 
+	padding-left: 2px
+	margin-bottom: 5px
+.comment-author 
+	display: flex
+	//height: 38px
+	img
+		margin-right: 10px
+		display: inline-block
+		border-radius: 50%
+		border: 1px solid white
+	.fn, span
+		line-height: 38px 
+	.fn 
+		margin-right: 5px
+
+.comment-metadata
+	text-align: right
+	text-transform: uppercase
+	margin-top: -5px
+	margin-right: 5px
+	font-size: 12px
+	a
+		color: #666
+.comment-content 
+	padding: 20px 0
+	font-size: 16px
+	font-weight: 300
+	margin-left: 60px
+.children
+	margin-left: 50px
+	background-color: #E6E6E6

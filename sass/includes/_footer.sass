@@ -1,0 +1,55 @@
+.site-footer
+	width: 80%
+	height: 100px
+	margin: auto
+	background-color: $d-green
+	text-align: center
+	h1
+		font-weight: 500
+		color: white 
+		font-size: 24px
+		line-height: 100px
+.right-add
+	position: fixed
+	z-index: -1
+	top: 0
+	right: 0
+	width: 10%
+	img
+		z-index: -1
+		min-width: 100%
+
+.social-networks
+	display: flex
+	margin: auto
+	width: 80%
+	height: 100px
+	background-color: $l-green
+.yt, .fb
+	width: 50%
+	font-size: 48px
+	line-height: 100px
+	color: white
+	text-align: center
+.yt
+	background-color: $yt-color
+.fb
+	background-color: $fb-color
+.bottom-add
+	margin: auto
+	width: 80%
+	overflow: hidden
+	img
+		min-width: 100%
+
+@media(max-width: 900px)
+	footer, .bottom-add, .social-networks
+		width: 100%
+
+@media(max-width: 500px)
+	.yt, .fb
+		font-size: 38px
+
+@media(max-width: 380px)
+	.yt, .fb
+		font-size: 28px	

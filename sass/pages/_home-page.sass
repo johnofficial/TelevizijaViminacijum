@@ -1,0 +1,172 @@
+.content 
+	width: 80%
+	margin: auto
+	box-shadow: 0px 3px 10px -4px black
+	display: flex
+	flex-wrap: wrap
+	background-color: $clouds
+main 
+	display: flex
+	flex-wrap: wrap
+	width: 70%
+	background-color: $clouds
+.side-bar
+	width: 30%
+	overflow: hidden
+	img
+		min-width: 100%
+.news-post
+	margin-bottom: 15px
+	margin-top: 15px
+	margin-left: 25px
+	width: 45%
+	//min-height: 400px
+	background-color: $l-green
+	&:first-child
+		width: calc( 90% + 25px )
+		//height: auto
+		max-height: 400px
+		.thumbnail-image-container
+			position: relative
+			width: 50%
+			//height: calc(100% - 20px)
+			height: 380px
+			float: left
+			margin: 10px
+			//overflow: hidden
+			img
+				position: absolute
+				top: -9999px
+				bottom: -9999px
+				left: -9999px
+				right: -9999px
+				margin: auto
+				min-height: 100%
+		.news-title
+			padding-left: 10px
+			margin: 10px
+.thumbnail-image-container
+	width: 100%
+	height: 250px
+	overflow: hidden
+	position: relative
+	img
+		min-width: 100%
+		min-height: 100%
+		position: absolute
+		top: -9999px
+		bottom: -9999px
+		left: -9999px
+		right: -9999px
+		margin: auto
+.news-title
+	margin: 10px
+	a 
+		font-size: 24px
+		color: white
+.show-all
+	margin: auto
+	margin-top: 65px
+	margin-bottom: 65px
+	color: $l-green
+
+@media(max-width: 900px)
+	.content 
+		padding-top: 80px
+	main
+		width: 65%
+	.side-bar
+		width: 35%
+	.news-post
+		margin-top: 0
+		margin-left: 10px
+		&:first-child
+			width: calc(90% + 10px)
+			//min-height: 200px 
+			.news-title
+				padding-left: 10px
+				margin: 10px
+@media(max-width: 775px)
+	main
+		width: 100%
+	.side-bar
+		display: none
+	.news-post
+		margin: auto
+		margin-top: 20px
+		&:first-child
+			width: 100%
+			//min-height: 300px
+			max-height: 300px
+			margin-top: 0px
+			.thumbnail-image-container
+				width: 50%
+				height: 280px
+				float: left
+				margin: 10px
+				overflow: hidden
+				background-color: red
+				img
+					width: 100%
+					min-height: 100%
+					max-height: 100%
+			.news-title
+				padding-left: 10px
+				margin: 10px
+@media(max-width: 500px)
+	.news-post
+		width: 100%
+		min-height: 130px
+		max-height: 130px
+		margin-top: 0px
+		margin-bottom: 20px
+		&:first-child
+			width: 100%
+			height: 500px
+			position: relative
+			.thumbnail-image-container
+				width: 100%
+				height: 100%
+				float: left
+				margin: 0px
+				overflow: hidden
+				background-color: black
+				img
+					opacity: 0.8
+					width: 100%
+					min-height: 100%
+					max-height: 100%
+			.news-title
+				margin: 0
+				padding: 0
+				position: absolute
+				bottom: 0
+				background-color: rgba(0, 0, 0,0.7)
+				width: 100%
+				min-height: 30%
+				a 
+					margin-left: 0
+					padding-left: 0
+					font-size: 28px
+	.thumbnail-image-container
+		position: relative
+		overflow: hidden
+		width: 30%
+		height: 130px
+		float: left
+		img
+			position: absolute
+			top: -9999px
+			bottom: -9999px
+			left: -9999px
+			right: -9999px
+			margin: auto
+	.news-title
+		margin: 0
+		padding: 0
+		width: 70%
+		float: right
+		a
+			float: right
+			margin-left: 10px
+			font-size: 18px

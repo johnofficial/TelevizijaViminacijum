@@ -1,0 +1,151 @@
+.site-header
+	height: 100px
+	width: 80%
+	margin: auto
+	background-color: $clouds
+.mobile-navigation
+	display: none
+.mobile-nav-toggle
+	display: none
+.logo
+	margin-left: 25px
+	font-family: $logo-font
+	font-size: 36px
+	line-height: 100px
+.desktop-nav
+	background-color: $d-green
+	height: 50px
+	width: 80%
+	margin: auto
+	li 
+		display: inline-block
+	a 
+		margin: 10px
+		text-transform: uppercase
+		font-size: 18px
+		color: white
+		opacity: 0.7
+		transition: 0.3s
+		line-height: 50px
+		&:first-child
+			margin-left: 0px
+		&:hover
+			opacity: 1
+li.current-menu-item a
+	opacity: 1
+.menu-primary-menu-container
+	margin-left: 25px
+	float: left
+.search-form-container
+	width: calc( 30% - 25px )
+	margin-top: 10px
+	margin-right: 25px
+	float: right
+.search-bar
+	width: 100%
+	border: none
+	height: 30px
+	background-color: $l-green
+	color: white
+	padding-left: 10px
+	&:placeholder
+		color: white
+	&:focus
+		outline: none
+		color: white
+	&:-webkit-autofill
+		background-color: transparent
+		-webkit-box-shadow: 0 0 0px 1000px $l-green inset
+
+.left-add
+	position: fixed
+	z-index: -1
+	top: 0
+	width: 10%
+	img
+		z-index: -1
+		min-width: 100%
+
+
+@media(max-width: 900px)
+	.desktop-nav, .left-add, .right-add
+		display: none
+	.site-header, .content, footer
+		min-width: 100%
+	.site-header
+		position: fixed
+		z-index: 3
+		height: 80px
+	.logo
+		margin-left: 10px
+		font-size: 32px
+		line-height: 80px
+		float: left
+
+	.mobile-navigation
+		z-index: 2
+		display: block
+		width: 100%
+		height: 205px
+		background-color: $clouds
+		text-align: center
+		position: fixed
+		top: -205px
+		transition: 0.3s
+		&.is-open
+			top: 80px
+	.menu-primary-menu-container
+		width: 100%
+		margin: 0
+		//position: relative
+		z-index: 2
+		ul li 
+			margin-bottom: 10px
+			margin-top: 10px
+		a
+			color: #222
+			font-size: 24px
+			font-weight: 400
+			opacity: 0.7
+
+	.mobile-nav-toggle
+		display: flex
+		position: relative
+		float: right
+		margin-right: 10px
+		margin-top: 10px
+		height: 60px
+		width: 60px
+		align-items: center
+		span,
+		span::before,
+		span::after
+			transition: 0.1s
+			display: block
+			position: absolute
+			content: ''
+			background-color: black
+			height: 2px
+			width: 100%
+		span::before
+			top: -17px
+		span::after
+			top: 17px
+		&.is-open span
+			background-color: transparent
+		&.is-open span::before
+			top: 0px
+			transform: rotate(45deg)
+			transition: 0.5s
+		&.is-open span::after
+			transform-origin: center
+			top: 0px
+			transform: rotate(-45deg)
+			transition: 0.5s
+
+@media(max-width: 380px)
+	.logo
+		font-size: 28px
+@media(max-width: 300px)
+	.logo
+		font-size: 22px
