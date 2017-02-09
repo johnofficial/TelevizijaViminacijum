@@ -1,4 +1,4 @@
-jQuery(function(){
+ jQuery(function(){
   mobileMenu();
   contactForm();
 });
@@ -45,7 +45,11 @@ function contactForm(){
 				console.log(response);
 			},
 			success : function( response ){
-				console.log(response);
+				if( response == 0){
+					console.log('Unn to save try again');
+				}else{
+					console.log('message saved');
+				}
 			}
 			
 		});

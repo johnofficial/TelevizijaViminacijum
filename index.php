@@ -13,12 +13,13 @@
 						<?php endwhile; ?>
 					<?php endif; ?>
 					<?php wp_reset_postdata(); ?>
-					<a href="wp/vesti/" class="show-all">PRIKAŽI SVE VESTI </a>
+					<div class="show-all">						
+						<a href="wp/vesti/" >ПРИКАЖИ СВЕ ВЕСТИ</a>
+					</div>
 
 		</main>
 		
 		<section class="side-bar">
-			<img src="<?php echo get_template_directory_uri().'/img/add-1.png' ?>">
 			<img src="<?php echo get_template_directory_uri().'/img/web-design.png' ?>">
 		</section>
 

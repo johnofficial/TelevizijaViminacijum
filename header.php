@@ -20,7 +20,7 @@
 <body>
 
 	<header class="site-header">
-		<h1 class="logo">TV VIMINACIUM</h1>
+		<h1 class="logo"><?php bloginfo('title'); ?></h1>
 				
 			<div class="mobile-nav-toggle">
 			    <span></span>

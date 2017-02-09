@@ -16,7 +16,7 @@
 
 
 	<footer class="site-footer">
-		<h1>TV VIMINACIUM © 2017</h1>
+		<h1><?php bloginfo('title'); ?> © 2017</h1>
 	</footer>
 <?php wp_footer(); ?>
 </body>
