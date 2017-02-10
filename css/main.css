@@ -33,6 +33,9 @@ hr {
   margin-top: 3px;
   margin-bottom: 10px; }
 
+.hide {
+  display: none; }
+
 .site-header {
   height: 100px;
   width: 80%;
@@ -66,6 +69,7 @@ hr {
     font-size: 18px;
     color: white;
     opacity: 0.7;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
     line-height: 50px; }
     .desktop-nav a:first-child {
@@ -140,6 +144,7 @@ li.current-menu-item a {
     text-align: center;
     position: fixed;
     top: -205px;
+    -webkit-transition: 0.3s;
     transition: 0.3s; }
     .mobile-navigation.is-open {
       top: 80px; }
@@ -158,6 +163,8 @@ li.current-menu-item a {
       opacity: 0.7; }
 
   .mobile-nav-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     float: right;
@@ -165,10 +172,13 @@ li.current-menu-item a {
     margin-top: 10px;
     height: 60px;
     width: 60px;
-    align-items: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .mobile-nav-toggle span,
     .mobile-nav-toggle span::before,
     .mobile-nav-toggle span::after {
+      -webkit-transition: 0.1s;
       transition: 0.1s;
       display: block;
       position: absolute;
@@ -184,12 +194,17 @@ li.current-menu-item a {
       background-color: transparent; }
     .mobile-nav-toggle.is-open span::before {
       top: 0px;
-      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      -webkit-transition: 0.5s;
       transition: 0.5s; }
     .mobile-nav-toggle.is-open span::after {
-      transform-origin: center;
+      -webkit-transform-origin: center;
+              transform-origin: center;
       top: 0px;
-      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      -webkit-transition: 0.5s;
       transition: 0.5s; } }
 @media(max-width: 380px) {
   .logo {
@@ -201,8 +216,11 @@ li.current-menu-item a {
   width: 80%;
   margin: auto;
   box-shadow: 0px 3px 10px -4px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #fff; }
 
 main {
@@ -222,9 +240,11 @@ main {
   min-height: 200px;
   max-height: 200px;
   margin-top: 0px;
+  margin-left: 10px;
   margin-bottom: 20px;
   background-color: white; }
   .news-post:first-child {
+    margin-left: 0px;
     max-height: 400px;
     width: 100%;
     height: 500px;
@@ -396,6 +416,8 @@ main {
     min-width: 100%; }
 
 .social-networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: auto;
   width: 80%;
@@ -497,6 +519,7 @@ main {
   height: 40px;
   width: 100%;
   border-radius: 4px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer; }
 @media(max-width: 900px) {
@@ -555,6 +578,8 @@ main {
   margin-bottom: 5px; }
 
 .comment-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
   .comment-author img {
     margin-right: 10px;
@@ -595,6 +620,7 @@ main {
   opacity: 0.9; }
 
 .contact-form {
+  text-align: center;
   margin: 100px auto; }
 
 .form-control {
@@ -607,6 +633,10 @@ main {
   padding-right: 20px;
   border: 1px solid #4caf50;
   background-color: transparent; }
+  .form-control.error {
+    border: 1px solid red; }
+  .form-control:focus {
+    outline: none; }
 
 textarea.form-control {
   resize: none;
@@ -628,4 +658,8 @@ textarea.form-control {
   font-size: 18px;
   font-weight: 400; }
 
-/*# sourceMappingURL=main.css.map */
+.success {
+  color: #4caf50; }
+
+.non-success {
+  color: red; }

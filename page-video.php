@@ -4,7 +4,7 @@
 	<div class="content">
 			
 		<main>
-					<?php $VideoNews = new WP_Query('type=post&posts_per_page=-1&cat=7') ?>
+					<?php $VideoNews = new WP_Query('type=post&posts_per_page=-1&category_name=video') ?>
 					<?php if( $VideoNews->have_posts() ): ?> 
 						<?php while( $VideoNews->have_posts() ): $VideoNews->the_post(); ?>
 														

@@ -17,6 +17,9 @@ function mobileMenu(){
 function contactForm(){
 	$('#viminaciumContactForm').on('submit', function(e){
 		e.preventDefault();
+
+		$('.error').removeClass('error');
+
 		var form 		= $(this),
 			name 		= form.find('#name').val(),
 			email		= form.find('#email').val(),
@@ -24,10 +27,20 @@ function contactForm(){
 			ajaxurl		= form.data('url');
 
 
-			if( name === '' || email == '' || message == ''){
-				console.log('Zatražena polja su prazna.');
+			if( name === ''){
+				$('#name').addClass('error');
 				return;
 			}
+			if( email === ''){
+				$('#email').addClass('error');
+				return;
+			}
+			if( message === ''){
+				$('#message').addClass('error');
+				return;
+			}
+
+			form.find('input, button, textarea').attr('disabled', 'disabled');
 
 			$.ajax({
 			
@@ -46,9 +59,9 @@ function contactForm(){
 			},
 			success : function( response ){
 				if( response == 0){
-					console.log('Unn to save try again');
+					$('.non-success').removeClass('hide');
 				}else{
-					console.log('message saved');
+					$('.success').removeClass('hide');
 				}
 			}
 			

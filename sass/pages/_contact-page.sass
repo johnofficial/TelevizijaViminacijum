@@ -1,4 +1,5 @@
 .contact-form
+	text-align: center
 	margin: 100px auto
 	//width: 80%
 .form-control
@@ -11,6 +12,11 @@
 	padding-right: 20px
 	border: 1px solid $d-green
 	background-color: transparent
+	&.error
+		border: 1px solid red
+	&:focus
+		outline: none
+
 textarea.form-control
 	resize: none
 	display: block
@@ -31,5 +37,7 @@ textarea.form-control
 	color: white
 	font-size: 18px
 	font-weight: 400
-	
-
+.success
+	color: $d-green
+.non-success
+	color: red
